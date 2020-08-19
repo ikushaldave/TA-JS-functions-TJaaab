@@ -30,7 +30,7 @@ addTwoNumbers(10, "100"); // Alert Enter Valid Input
 */
 
 function addTwoNumbers(firstNum, secondNum) {
-	if (!isNaN(firstNum) && !isNaN(secondNum)) {
+	if (typeof firstNum === "number" && typeof secondNum === "number") {
 		return Number(firstNum) + Number(secondNum);
 	} else {
 		alert(`Enter Valid Input`);
@@ -78,7 +78,9 @@ isLeapYear(2001); // false
 
 function isLeapYear(year) {
 	if (!isNaN(year)) {
-		return year % 4 == 0 && year % 100 != 0 ? true : false;
+		return ((year % 4 == 0 && year % 100 != 0) || year % 400 = 0
+			? true
+			: false);
 	}
 }
 
@@ -93,7 +95,5 @@ function getFactorial(number) {
 			factorial *= i;
 		}
 		return factorial;
-	} else {
-		alert(`Enter a Valid Input`);
-	}
+	} else alert(`Enter a Valid Input`);
 }
