@@ -8,15 +8,12 @@
   * [ ] Add an additional argument to the function that takes the conversion rate of human to dog years.
 */
 
-function calculateDogAge(age, conversionRate) {
-	let dogAge = 0;
-	for (let i = 1; i <= age; i++) {
-		dogAge += conversionRate;
-	}
-	return `${dogAge} year in dog years`;
+function calculateDogAge(age, conversionRate = 7) {
+	return `${age * conversionRate} year in dog years`;
 }
 
-calculateDogAge(2, 7);
+calculateDogAge(2);
+
 /*
 2. 🎖Write a function named calculateMoviesToWatch that:
   * [ ] takes 2 arguments: age, number of movies you watch every week. (take 4 weeks per month)
