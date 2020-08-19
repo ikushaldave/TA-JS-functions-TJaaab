@@ -81,7 +81,7 @@ function isLeapYear() {
 	let year = +prompt(`Enter a year (2020..)`);
 
 	if (!isNaN(year)) {
-		year % 4 === 0 && year % 100 !== 0
+		(year % 4 === 0 && year % 100 !== 0) || year % 400 === 0
 			? alert(`${year} is a leap year`)
 			: alert(`${year} is not a leap year`);
 	}
